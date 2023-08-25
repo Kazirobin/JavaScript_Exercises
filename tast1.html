@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css" media="all">
+      .main {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        /* TODO */
+        width: max-content;
+        margin: auto;
+        border: 3px solid firebrick;
+      }
+      .box {
+        flex-shrink: 100px;
+        width: min-content;
+        cursor: pointer;
+        padding: 10px;
+        background-color: aqua;
+      }
+      .active {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box active">box1</div>
+      <div class="box">
+        box2 Lorem ipsum dolor sit Amen consenter adipisicing elite. Ut at eum
+        lilo ea cum commode magna nostrum inventors libero et?
+      </div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+    </div>
+    <script>
+      const boxs = document.querySelectorAll('.box');
+      boxs.forEach((e) => {e.addEventListener('click',() => {
+        removeClass();
+        e.classList.add('active')
+      })})
+      function removeClass(){boxs.forEach((e) => {
+        e.classList.remove('active')
+      })}
+    </script>
+  </body>
+</html>
