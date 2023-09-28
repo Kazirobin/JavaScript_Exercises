@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50vh;
+            width: 5vw;
+            background-color: firebrick;
+            display: inline-block;
+        }
+        .active{
+            background-color: green;
+            width: 60vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box active"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelectorAll('.box');
+        box.forEach((e) => {
+            e.addEventListener('click',()=>{
+                moveClsaa();
+                e.classList.toggle('active')
+            })
+        })
+        function moveClsaa(){
+            box.forEach((e) => {
+                e.classList.remove('active')
+            })
+        }
+    </script>
+</body>
+</html>

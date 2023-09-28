@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .progress_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        width: 350px;
+        margin: auto;
+        position: relative;
+    }
+    .container{
+        width: 100%;
+        display: block;
+        text-align: center;    
+    }
+    .circle{
+        outline: 4px gray solid;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+    .active{
+        outline: 4px blue solid;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+    .progress {
+    height: 4px;
+    width: 0%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1; /* Changed z-index to 1 */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress_container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+            </div>
+            <button id="prev" disabled>Prev</button>
+            <button id="Next">Next</button>
+    </div>
+    
+    <script>
+    const progress = document.getElementById('progress');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const circles = document.querySelectorAll('.circle');
+    let active = 1;
+
+    next.addEventListener('click', () => {
+        active++;
+        if (active > circles.length) {
+            active = circles.length;
+        }
+        updateProgress();
+    });
+
+    prev.addEventListener('click', () => {
+        active--;
+        if (active < 1) {
+            active = 1;
+        }
+        updateProgress();
+    });
+
+    function updateProgress() {
+        circles.forEach((circle, idx) => {
+            if (idx < active) {
+                circle.classList.add('active');
+            } else {
+                circle.classList.remove('active');
+            }
+        });
+
+        const progressWidth = ((active - 1) / (circles.length - 1)) * 100 + '%';
+        progress.style.width = progressWidth;
+
+        // Disable/enable buttons based on the active step
+        if (active === 1) {
+            prev.disabled = true;
+        } else if (active === circles.length) {
+            next.disabled = true;
+        } else {
+            prev.disabled = false;
+            next.disabled = false;
+        }
+    }
+        
+    </script>
+</body>
+</html>

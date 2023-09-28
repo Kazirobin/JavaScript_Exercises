@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello
+    <img src="./pic_bulboff.gif" alt="Light Bulb Off" id="img">
+    <button id="toggleButton">ON</button>
+  
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const img = document.getElementById("img");
+      let isOn = false; // A flag to track the state
+  toggleButton.addEventListener("click",() => {
+
+      if(isOn){
+          img.src="./pic_bulboff.gif"
+          toggleButton.innerText="ON"
+      }
+      else {
+          img.src="./pic_bulbon.gif"
+          toggleButton.innerText="OFF"
+      }
+      isOn=!isOn
+  })
+    </script>
+</body>
+</html>
