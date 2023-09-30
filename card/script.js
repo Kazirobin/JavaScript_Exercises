@@ -1,6 +1,5 @@
 const cardData =[
-    {
-        heading: "card 1",
+    {        heading: "card 1",
         body: "this is body 1"
     },
     {
@@ -24,22 +23,17 @@ const cardData =[
     },{
         heading: "card 7",
         body: "this is body 7"
-    }
-]
+    }]
 const postContainer = document.querySelector('.container');
-
 const postMethods = () => {
-cardData.map((postData) => {
-const postElement = document.createElement('div');
-postElement.classList.add('card');
-postElement.innerHTML=`
-<h3 class="head">${postData.heading}</h3>
-<p class="body">${postData.body}</p>
-`
-postContainer.appendChild(postElement);
-})
-};
-
-
-
+    cardData.map((data) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+        <h3 class="head">${data.heading}</h3>
+        <p class="body">${data.body}</p>
+        `
+        postContainer.appendChild(card)
+    })
+}
 postMethods();

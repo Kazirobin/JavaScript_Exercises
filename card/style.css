@@ -17,10 +17,6 @@
     box-shadow: 0 0 .44rem .4rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
 }
 .card:hover{
     background-color: rgb(219, 255, 127);
