@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bg{
+    background:
+    url('https://img.freepik.com/premium-photo/rock-podium-tropical-forest-product-presentation-is-view-sky_41470-4989.jpg?size=626&ext=jpg&ga=GA1.1.1858753788.1674226973&semt=sph') no-repeat center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter:blur(30px) ;
+    -webkit-filter:blur(30px) ;
+}
+.loading-text{
+    font-size: 50px;
+    color: #fff;
+}
