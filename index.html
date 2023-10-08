@@ -25,6 +25,9 @@
         text-align: center;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
+      body{
+        counter-reset: demo-counter;
+      }
       h1 {
         color: var(--color-1);
         font-size: 45px;
@@ -47,6 +50,12 @@
       }
       .project {
         margin-block: 20px;
+        counter-increment: demo-counter;
+      }
+      .project::before{
+        content: counter(demo-counter) ". ";
+        font-size: 40px;
+        font-weight: 800;
       }
     </style>
   </head>
@@ -56,35 +65,42 @@
       <div class="project">
         <h4>Expanding Cards</h4>
         <a href="./Expanding_Cards/index.html"
-          ><i class="fa-regular fa-eye"></i
+          >view<i class="fa-regular fa-eye"></i
         ></a>
       </div>
 
       <div class="project">
         <h4>Progress Steps</h4>
         <a href="./Progress_Steps/index.html"
-          ><i class="fa-regular fa-eye"></i
+          >view<i class="fa-regular fa-eye"></i
         ></a>
       </div>
 
       <div class="project">
         <h4>Rotating Navigation</h4>
         <a href="./Rotating_Navigation/index.html"
-          ><i class="fa-regular fa-eye"></i
+          >view<i class="fa-regular fa-eye"></i
         ></a>
       </div>
 
       <div class="project">
         <h4>Hidden_Search</h4>
         <a href="./Hidden_Search/index.html"
-          ><i class="fa-regular fa-eye"></i
+          >view<i class="fa-regular fa-eye"></i
         ></a>
       </div>
 
       <div class="project">
         <h4>Blurry_Loding</h4>
         <a href="./Blurry_Loding/index.html"
-          ><i class="fa-regular fa-eye"></i
+          >view<i class="fa-regular fa-eye"></i
+        ></a>
+      </div>
+
+      <div class="project">
+        <h4>Scroll_Animation</h4>
+        <a href="./Scroll_Animation/index.html"
+          >view<i class="fa-regular fa-eye"></i
         ></a>
       </div>
     </div>
