@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+nav {
+  background-color: #fff;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transition: width 0.6s linear;
+  -moz-transition: width 0.6s linear;
+  -ms-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+}
+nav.active {
+  width: 350px;
+  transition: width 0.6s linear;
+  -webkit-transition: width 0.6s linear;
+  -moz-transition: width 0.6s linear;
+  -ms-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 0;
+  transition: width 0.6s linear;
+  -webkit-transition: width 0.6s linear;
+  -moz-transition: width 1.6s linear;
+  -ms-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+}
+nav.active ul {
+  width: 100%;
+  transition: width 0.6s linear;
+  -webkit-transition: width 0.6s linear;
+  -moz-transition: width 0.6s linear;
+  -ms-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+}
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s liner, opacity 0.6s liner;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -webkit-transition: transform 0.6s liner, opacity 0.6s liner;
+  -moz-transition: transform 0.6s liner, opacity 0.6s liner;
+  -ms-transition: transform 0.6s liner, opacity 0.6s liner;
+  -o-transition: transform 0.6s liner, opacity 0.6s liner;
+}
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+}
+nav ul a,
+.line {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.icon {
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  height: 30px;
+  width: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
+}
+.icon:focus {
+  outline: 0;
+}
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left:0;
+  transition: transform 0.6s linear;
+  -webkit-transition: transform 0.6s linear;
+  -moz-transition: transform 0.6s linear;
+  -ms-transition: transform 0.6s linear;
+  -o-transition: transform 0.6s linear;
+}
+.icon .line2{
+    top: auto;
+    bottom: 10px;
+}
+nav.active .icon .line1{
+    transform: rotate(-765deg) translateY(5.5px);
+    -webkit-transform: rotate(-765deg) translateY(5.5px);
+    -moz-transform: rotate(-765deg) translateY(5.5px);
+    -ms-transform: rotate(-765deg) translateY(5.5px);
+    -o-transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2{
+    transform: rotate(765deg) translateY(-5.5px);
+    -webkit-transform: rotate(765deg) translateY(-5.5px);
+    -moz-transform: rotate(765deg) translateY(-5.5px);
+    -ms-transform: rotate(765deg) translateY(-5.5px);
+    -o-transform: rotate(765deg) translateY(-5.5px);
+}
