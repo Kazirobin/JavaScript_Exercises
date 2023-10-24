@@ -47,6 +47,15 @@
         color: aliceblue;
         font-size: 40px;
         padding: 0 20px;
+        border: 3px var(--color-1) solid;
+        transform: scale(1);
+        transition: transform 0.3s ease ;
+    }
+    a:hover{
+        transform: scale(1.2);
+          border: 3px var(--color-1) solid;
+        color: black;
+        background-color: aliceblue;
       }
       .projects {
         display: flex;
@@ -56,6 +65,11 @@
       .project {
         margin-block: 20px;
         counter-increment: demo-counter;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
       .project::before {
         content: counter(demo-counter) ". ";
