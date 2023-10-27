@@ -68,6 +68,11 @@ body{
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
+    transition:all ease 1s;
+    -webkit-transition:all ease 1s;
+    -moz-transition:all ease 1s;
+    -ms-transition:all ease 1s;
+    -o-transition:all ease 1s;
 }
 .needle.hour{
     transform: translate(-50%, -100%) rotate(0deg);
