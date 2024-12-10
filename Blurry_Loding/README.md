@@ -1,2 +1,2 @@
 this is page 3
-[back to home](./)
+[back to home](../)
