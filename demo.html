@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .container {
+      }
+      .text_1{
+      }
+    </style>
+  </head>
+  <body>
+
+    <body cz-shortcut-listen="true">
+
+        <div class="container">
+            <div class="logo"></div>
+            <div class="title">BARFI OTC FREE SIGNAL v5</div>
+            
+            <!-- Telegram handle -->
+            <div class="telegram-handle">TELEGARM OFFICIAL - @Barfibomm</div>
+        
+            <!-- Dropdown for asset selection -->
+            <select id="assetDropdown" class="dropdown">
+                <option value="AUD/CAD (OTC)">AUD/CAD (OTC)</option>
+                <option value="EUR/USD (OTC)">EUR/USD (OTC)</option>
+                <option value="BITCOIN (OTC)">BITCOIN (OTC)</option>
+                <option value="GBP/USD (OTC)">GBP/USD (OTC)</option>
+                <option value="USD/JPY (OTC)">USD/JPY (OTC)</option>
+                <option value="USD/MXN (OTC)">USD/MXN (OTC)</option>
+                <option value="USD/PKR (OTC)">USD/PKR (OTC)</option>
+                <option value="USD/BRL (OTC)">USD/BRL (OTC)</option>
+                <option value="USD/INR (OTC)">USD/INR (OTC)</option>
+                <option value="USD/TRY (OTC)">USD/TRY (OTC)</option>
+                <option value="USD/EGP (OTC)">USD/EGP (OTC)</option>
+                <option value="USD/ARS (OTC)">USD/ARS (OTC)</option>
+                <option value="USD/NGN (OTC)">USD/NGN (OTC)</option>
+                <option value="USD/DZD (OTC)">USD/DZD (OTC)</option>
+            </select>
+        
+            <div class="time">1 MIN</div>
+            <button id="generateBtn" onclick="generateSignal()">GET SIGNAL</button>
+            <div class="message" id="signalMessage"></div>
+            <div class="cooldown" id="cooldownMessage"></div>
+        
+            <!-- Telegram Button -->
+            <button id="telegramBtn" onclick="openTelegram()">Join Our Official Telegram Channel</button>
+        </div>
+        
+        <script>
+            let cooldown = false;
+        
+            function generateSignal() {
+                if (cooldown) {
+                    document.getElementById('cooldownMessage').textContent = "Please wait for 2 minutes...";
+                    return;
+                }
+        
+                // Clear cooldown message if it was previously set
+                document.getElementById('cooldownMessage').textContent = "";
+        
+                // Set cooldown for 2 minutes
+                cooldown = true;
+                setTimeout(() => {
+                    cooldown = false;
+                    document.getElementById('cooldownMessage').textContent = "";
+                }, 2 * 60 * 1000); // 2 minutes cooldown
+        
+                // Get selected asset from dropdown
+                const asset = document.getElementById('assetDropdown').value.replace(" ", "").replace("/", "").replace("(", "").replace(")", "");
+        
+                // Generate random signal (CALL or PUT)
+                const signals = ["CALL", "PUT"];
+                const randomSignal = signals[Math.floor(Math.random() * signals.length)];
+        
+                // Calculate the next minute time
+                const now = new Date();
+                const nextMinute = new Date(now.getTime() + 60 * 1000);
+                const formattedTime = nextMinute.getHours().toString().padStart(2, '0') + ':' +
+                                      nextMinute.getMinutes().toString().padStart(2, '0');
+        
+                // Display signal message in the new format
+                const signalMessage = document.getElementById('signalMessage');
+                const newMessage = document.createElement('div');
+                newMessage.textContent = `${asset} ${formattedTime} ${randomSignal}`;
+                signalMessage.appendChild(newMessage);
+            }
+        
+            function openTelegram() {
+                window.open("https://t.me/traderofbarfi", "_blank");
+            }
+        </script>
+        <iframe width="0" height="30" src="https://t.me/traderofbarfi frameborder=" 0"="" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+        
+        
+        <script>(() => {
+                window.addoncropExtensions = window.addoncropExtensions || [];
+                window.addoncropExtensions.push({
+                    mode: 'emulator',
+                    emulator: 'Foxified',
+                    extension: {
+                        id: 44,
+                        name: 'YouTube Downloader by Addoncrop',
+                        version: '17.3.8',
+                        date: 'October 4, 2024',
+                    },
+                    flixmateConnected: false,
+                });
+            })();</script></body>
+  </body>
+</html>

@@ -1,24 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     My first Javascript calculator
-    <div class="products">
-        <div class="product">
-            
-                <select class="product__name" name="" id="">
-
-                </select>
-                <select class="product__name" name="" id="">
-
-                </select>
-                
-        </div>
+    <div class="balance">
+        <h1 class="balance__title">Add your balance here :</h1>
+      <input type="number" name="" id="" class="balance__input" />
+      <button class="balance__input__submit">Submit</button>
+      <h1 class="balance__amount">4000৳</h1>
     </div>
-</body>
+    <div class="container">
+      <div class="products">
+        
+        <div class="product">
+          <select class="product__names" name="" id="">
+            <option value="alu" selected>alu</option>
+            <option value="piaj">piaj</option>
+            <option value="ata">ata</option>
+            <option value="tel">tel</option>
+            <option value="lobon">lobon</option>
+          </select>
+          <h1 class="product__price__ragular">60৳</h1>
+          <input
+            type="number"
+            name=""
+            id=""
+            class="product__quantity__input"
+            value="1"
+          />
+          <h1 class="product__quantity__amount">1kg</h1>
+          <h1 class="product__price__total">60৳</h1>
+        </div>
+        
+        <div class="product">
+          <select class="product__names" name="" id="">
+            <option value="alu" selected>alu</option>
+            <option value="piaj">piaj</option>
+            <option value="ata">ata</option>
+            <option value="tel">tel</option>
+            <option value="lobon">lobon</option>
+          </select>
+          <h1 class="product__price__ragular">60৳</h1>
+          <input
+            type="number"
+            name=""
+            id=""
+            class="product__quantity__input"
+            value="1"
+          />
+          <h1 class="product__quantity__amount">1kg</h1>
+          <h1 class="product__price__total">60৳</h1>
+        </div>
+        
+        <div class="product">
+          <select class="product__names" name="" id="">
+            <option value="alu" selected>alu</option>
+            <option value="piaj">piaj</option>
+            <option value="ata">ata</option>
+            <option value="tel">tel</option>
+            <option value="lobon">lobon</option>
+          </select>
+          <h1 class="product__price__ragular">60৳</h1>
+          <input
+            type="number"
+            name=""
+            id=""
+            class="product__quantity__input"
+            value="1"
+          />
+          <h1 class="product__quantity__amount">1kg</h1>
+          <h1 class="product__price__total">60৳</h1>
+        </div>
+        
+        <div class="product">
+          <select class="product__names" name="" id="">
+            <option value="alu" selected>alu</option>
+            <option value="piaj">piaj</option>
+            <option value="ata">ata</option>
+            <option value="tel">tel</option>
+            <option value="lobon">lobon</option>
+          </select>
+          <h1 class="product__price__ragular">60৳</h1>
+          <input
+            type="number"
+            name=""
+            id=""
+            class="product__quantity__input"
+            value="1"
+          />
+          <h1 class="product__quantity__amount">1kg</h1>
+          <h1 class="product__price__total">60৳</h1>
+        </div>
+
+      </div>
+      <button class="add">Add More Product</button>
+    </div>
+    <div class="result">
+      <div class="discount flex">
+        <h1>Add a discount Amount :</h1>
+        <input type="number" name="" id="" class="discount__parcentage" />
+        <button type="submit">Submit</button>
+        <h1 id="discount__parcentage">5%</h1>
+      </div>
+      <div class="discount__amount flex">
+        <h1>Total Discount Amount :</h1>
+        <h1 class="discount__amount__price">50$</h1>
+      </div>
+      <div class="total__price flex">
+        <h1>Total Price Amount :</h1>
+        <h1 class="total__price__amount">500</h1>
+      </div>
+      <div class="total__price__d flex">
+        <h1>total price after divided discount :</h1>
+        <h1 class="total__price__divided__discount">500</h1>
+      </div>
+    </div>
+  </body>
 </html>
